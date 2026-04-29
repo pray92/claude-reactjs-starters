@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     template: "%s | Next.js Starter Kit",
   },
   description:
-    "Next.js v15 App Router + TypeScript + Tailwind CSS + shadcn/ui로 구성된 모던 웹 스타터킷",
+    "Next.js v16 App Router + TypeScript + Tailwind CSS + shadcn/ui로 구성된 모던 웹 스타터킷",
   keywords: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui"],
 }
 

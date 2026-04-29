@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 const techStack = [
   {
     icon: Code2,
-    name: "Next.js 15",
+    name: "Next.js 16",
     description: "App Router 기반의 풀스택 React 프레임워크",
     badge: "프레임워크",
   },
