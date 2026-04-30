@@ -22,7 +22,12 @@ HOOK_EVENT=$(echo "$HOOK_DATA" | jq -r '.hook_event_name // empty')
 case "$HOOK_EVENT" in
   "Notification")
     TITLE="🔔 Claude Code: 권한 요청"
-    MESSAGE="Claude가 권한 승인을 기다리고 있습니다. 확인해주세요!"
+    PERMISSION_MSG=$(echo "$HOOK_DATA" | jq -r '.message // empty')
+    if [ -n "$PERMISSION_MSG" ]; then
+      MESSAGE="Claude가 권한 승인을 기다리고 있습니다. 확인해주세요!\n\n*요청 내용:*\n$PERMISSION_MSG"
+    else
+      MESSAGE="Claude가 권한 승인을 기다리고 있습니다. 확인해주세요!"
+    fi
     ;;
   "Stop")
     TITLE="✅ Claude Code: 작업 완료"
